@@ -2,14 +2,16 @@
 
 let buttonEle=document.getElementById("addTodoBtn");
 buttonEle.addEventListener("click",function() {
-	let inputElementVal=document.getElementById("newTodoInput").value;
+	let inputElement=document.getElementById("newTodoInput");
 	let olEle=document.getElementById("todoList");
 	let liEle=document.createElement("li");
-	if(inputElementVal==""){
+	if(inputElement.value==""){
 		alert('please add todo');
 	}else{
-		liEle.innerText=inputElementVal;
+		liEle.innerText=inputElement.value;
 		olEle.appendChild(liEle);
+
+		inputElement.value="";
 	}
 	
 
